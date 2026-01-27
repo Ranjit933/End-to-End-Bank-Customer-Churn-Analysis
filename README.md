@@ -63,9 +63,47 @@ You experimented with multiple algorithms to find the most robust solution:
 6. **Evaluation:** Compare metrics via Heatmaps and Confusion Matrices.
 7. **Finalize:** Export the best-performing model for production.
 
+### **A. Logistic Regression (The Baseline)**
+Logistic Regression serves as the fundamental baseline for binary classification. It is used to understand the linear relationship between customer features (like credit score) and the probability of exit.
+Implementation: Built using an imbalanced-learn pipeline that combines MinMaxScaler for numerical normalization and OneHotEncoder for categorical data.
+SMOTE Integration: Oversampling was applied within the pipeline to ensure the model learned from a balanced representation of both "Stay" and "Exit" classes.
+
+![Logistic Regression Pipline](https://github.com/Ranjit933/End-to-End-Bank-Customer-Churn-Analysis/blob/main/Pipline/Logistic.png)
+
+### **B. Decision Tree (The Intuitive Model)**
+Decision Trees offer a high degree of interpretability by splitting the data into a flowchart-like structure based on feature importance.
+Technique: Utilized DecisionTreeClassifier to create a non-linear boundary for customer segments.
+Feature Splits: This model helps identify specific "cutoff points" (e.g., Age > 42) that significantly increase churn risk.
+
+![Decision Tree Pipline](https://github.com/Ranjit933/End-to-End-Bank-Customer-Churn-Analysis/blob/main/Pipline/Decision%20tree.png)
+
+### **C. Random Forest (The Ensemble Powerhouse)**
+To improve upon the single Decision Tree, Random Forest uses an ensemble of multiple trees to reduce overfitting and increase prediction stability.
+Strategy: Implemented RandomForestClassifier, which averages the results of many individual trees to produce a more robust final prediction.
+Advantage: Highly effective at handling complex datasets with mixed feature types without requiring extensive manual tuning.
+
+![Randome Forest Pipline](https://github.com/Ranjit933/End-to-End-Bank-Customer-Churn-Analysis/blob/main/Pipline/RandomForest.png)
+
+4. Support Vector Machine - SVM (The Geometric Optimizer)
+SVM is one of your top-performing models in this project. It works by finding the "Hyperplane" that best separates the two classes in a high-dimensional space.
+Top Performance: Along with Deep Learning, your analysis showed that SVM provided the most leveled predictions for both "Stays" and "Exits".
+Precision/Recall Balance: The SVM model was saved as best_svm_model.pkl for deployment because of its superior ability to generalize across new customer data.
+
+![SVM Pipline](https://github.com/Ranjit933/End-to-End-Bank-Customer-Churn-Analysis/blob/main/Pipline/SVM.png)
+
+5. XGBoost (The Gradient Booster)
+XGBoost (Extreme Gradient Boosting) is a state-of-the-art algorithm frequently used in industry competitions for its speed and performance.
+Mechanism: It builds trees sequentially, where each new tree corrects the errors made by the previous ones.
+Efficiency: Integrated into the pipeline to compare how modern boosting techniques perform against traditional linear and ensemble models.
+
+![XGBOOST Pipline](https://github.com/Ranjit933/End-to-End-Bank-Customer-Churn-Analysis/blob/main/Pipline/XGBOOST.png)
+
+
 # BankGuard: Churn Intelligence 🏦
 
 An end-to-end Machine Learning pipeline designed to identify high-risk bank customers. This project utilizes **Deep Learning** and **SVM**, optimized with **SMOTE** to handle class imbalance across 10,000 customer records.
+
+![WorkFlow](https://github.com/Ranjit933/End-to-End-Bank-Customer-Churn-Analysis/blob/main/Pipline/Gemini_Generated_Image_n3xbagn3xbagn3xb.png)
 
 ---
 
@@ -93,3 +131,6 @@ graph TD
     H --> K[XGBoost & Random Forest]
     I & J & K --> L[Evaluation: Recall & Confusion Matrix]
     L --> M[Deployment: Joblib Model Export]
+
+
+
