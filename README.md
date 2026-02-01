@@ -107,6 +107,135 @@ An end-to-end Machine Learning pipeline designed to identify high-risk bank cust
 
 ---
 
+##  Bank Customer Churn Prediction – End-to-End Machine Learning Pipeline
+
+This project focuses on predicting **bank customer churn**  identifying customers who are likely to leave the bank  so that proactive retention strategies can be applied.
+
+Customer churn is costly for banks, and early identification of *at-risk customers* helps improve customer lifetime value and reduce revenue loss.
+
+---
+
+##  Business Objective
+
+* Identify customers who are likely to churn
+* Understand key factors contributing to churn
+* Enable **proactive customer retention strategies**
+* Reduce financial loss due to customer attrition
+
+---
+
+##  Workflow Overview
+
+The image represents the complete **end-to-end machine learning workflow** used in this project, from data exploration to deployment.
+
+---
+
+##  Exploratory Data Analysis (EDA)
+
+* Understand customer behavior and patterns
+* Analyze feature distributions and relationships
+* Detect missing values and outliers
+* Identify class imbalance in churn vs non-churn customers
+
+EDA helps in making informed decisions for preprocessing and modeling.
+
+---
+
+##  Imbalanced Data Handling
+
+Customer churn datasets are usually **highly imbalanced** (fewer churned customers).
+
+To address this:
+
+* **Resampling techniques** are applied
+* **SMOTE (Synthetic Minority Over-sampling Technique)** is used to balance the dataset
+
+This ensures models do not become biased toward the majority class.
+
+---
+
+##  Data Preprocessing
+
+###  Numeric Features
+
+* Scaled using **Min-Max Scaling** to bring all values to a similar range
+
+###  Categorical Features
+
+* Converted using **One-Hot Encoding**
+
+###  Feature Engineering
+
+* Creation of meaningful features to improve model performance
+* Removal of irrelevant or redundant features
+
+---
+
+##  Machine Learning Algorithms
+
+Multiple algorithms are trained and compared:
+
+* **Logistic Regression**
+* **Decision Tree**
+* **Random Forest**
+* **Support Vector Machine (SVM)**
+* **XGBoost**
+* **Deep Learning (Artificial Neural Network – ANN)**
+
+This multi-model approach ensures robust performance comparison.
+
+---
+
+##  Model Evaluation
+
+Models are evaluated using business-relevant metrics:
+
+* **Confusion Matrix**
+* **Recall Score** (important for identifying churn customers)
+* **F1-Score**
+---
+
+##  Best Performing Models
+
+Based on evaluation results:
+
+ **Support Vector Machine (SVM)**
+ **Deep Learning (ANN)**
+
+These models provided the best balance between recall and overall performance.
+
+---
+
+##  Deployment
+
+* Final selected model is serialized using **Joblib**
+* Ready for deployment in production systems
+* Can be integrated with banking applications for real-time churn prediction
+
+---
+
+##  Impact
+
+* Enables early identification of at-risk customers
+* Supports proactive retention campaigns
+* Improves customer satisfaction and reduces churn-related losses
+
+---
+
+## Conclusion
+
+This project demonstrates a **complete real-world data science pipeline**, combining:
+
+* Business understanding
+* Data preprocessing
+* Machine learning modeling
+* Evaluation and deployment
+
+It is designed to solve a **practical banking problem** with measurable business impact.
+
+---
+
+
 ## 📂 Repository Structure
 ```text
 BankGuard-Churn-Intelligence/
