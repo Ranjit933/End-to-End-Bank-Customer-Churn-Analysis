@@ -1,9 +1,3 @@
-Establishing your project’s narrative and technical flow is essential for effectively communicating its value to others, whether they are colleagues or interviewers.
-
-Below is a detailed end-to-end breakdown of your project, **BankGuard: Churn Intelligence**, including a comprehensive description and a technical pipeline flow based on your implementation.
-
----
-
 ### **1. Project Overview & Business Value**
 
 **The Problem:** Customer attrition, or "churn," is a critical challenge for banking institutions. It is significantly more expensive to acquire a new customer than to retain an existing one.
