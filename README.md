@@ -8,7 +8,7 @@
 
 ### **2. Technical Pipeline Flow**
 
-Your project follows a rigorous, industry-standard machine learning lifecycle.
+The project follows a rigorous, industry-standard machine learning lifecycle.
 
 #### **A. Data Audit & Initial Cleaning**
 
